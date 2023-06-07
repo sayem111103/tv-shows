@@ -1,0 +1,15 @@
+
+.open-button {
+    position: absolute;
+    top: 6px;
+    right: 11px;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    pointer-events: none;
+  }
+  
+  .open-button button {
+    border: none;
+    background: transparent;
+  }
