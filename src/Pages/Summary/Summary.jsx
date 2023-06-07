@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
 import './Summary.css'
 import useBookings from '../../Hooks/useBookings';
+import Swal from 'sweetalert2';
 
 const Summary = () => {
     const { data } = useLoaderData();
@@ -29,6 +30,11 @@ const Summary = () => {
             bookArray = [...bookings, bookInfo];
             localStorage.setItem('bookings', JSON.stringify(bookArray));
             refetch()
+            Swal.fire(
+                '',
+                'Booked Successfully',
+                'success'
+              )
             form.reset()
         }
     }
